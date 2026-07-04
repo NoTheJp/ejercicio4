@@ -5,5 +5,6 @@ package org.example;
 public class Main {
     static void main() {
         System.out.println("estoy en tu linea nebbercracker");
+
     }
 }
