@@ -5,16 +5,23 @@ import java.util.ArrayList;
 public class PlataformaStreaming {
     private ArrayList<CuentaUser> Corteos;
 
-    public PlataformaStreaming(){
+    public PlataformaStreaming() {
         this.Corteos = new ArrayList<>();
     }
 
-    public void registrarUsuario(CuentaUser nuevo){
+    public void registrarUsuario(CuentaUser nuevo) {
         this.Corteos.add(nuevo);
     }
 
+    public void reporte(){
 
+        double gantotal = 0;
+        for (int i = 0; i < this.Corteos.size(); i++) {
+            CuentaUser nuevo = this.Corteos.get(i);
+            double totalcuenta = nuevo.obtenerTotalAPagar();
 
+            gantotal += totalcuenta;
 
-
+        }
+    }
 }
