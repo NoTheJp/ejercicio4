@@ -16,5 +16,16 @@ abstract class CuentaUser {
         return this.plan.calcularCosto(this.meses);
     }
 
+    public String getCorreo(){
+        return this.correo;
+    }
+
+    public int getMeses() {
+        return meses;
+    }
+
+    public PlanSuscripcion getPlan() {
+        return plan;
+    }
 }
 

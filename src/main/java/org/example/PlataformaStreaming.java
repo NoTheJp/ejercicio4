@@ -21,6 +21,7 @@ public class PlataformaStreaming {
             double totalcuenta = nuevo.obtenerTotalAPagar();
 
             gantotal += totalcuenta;
+            System.out.println("Correo " + nuevo.get);
 
         }
     }
