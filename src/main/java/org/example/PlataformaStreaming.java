@@ -21,8 +21,10 @@ public class PlataformaStreaming {
             double totalcuenta = nuevo.obtenerTotalAPagar();
 
             gantotal += totalcuenta;
-            System.out.println("Correo " + nuevo.get);
-
+            System.out.println("Correo " + nuevo.getCorreo());
+            System.out.println("Meses " + nuevo.getMeses());
+            System.out.println("Plan " + nuevo.getPlan());
         }
+        System.out.println("Total recaudado: " + gantotal);
     }
 }
