@@ -11,5 +11,9 @@ abstract class CuentaUser {
         this.plan = Plan;
     }
 
+    public double obtenerTotalAPagar(){
+        return this.plan.calcularCosto(this.meses);
+    }
+
 }
 
