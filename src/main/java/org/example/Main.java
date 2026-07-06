@@ -47,5 +47,6 @@ public class Main {
                 2.- Ver reporte
                 0.- Salir
                 """);
+        System.out.println("holaa");
     }
 }
