@@ -7,4 +7,6 @@ public interface PlanSuscripcion {
         //o si quieres hacer tu propia interfaz/clase abstracta para los planes
         //Yo me encargo de CuentaUsuario y PlataformaStreaming.
         //Nómas avisame q show, yo al rato hago mi parte, sale??
+
+    //linea 11 modificada por el kenneth, veo los comentarios que pusiste
 }
