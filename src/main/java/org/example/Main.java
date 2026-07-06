@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static Scanner teclado = new Scanner (System.in);
     static void main() {
-        System.out.println("estoy en tu linea nebbercracker");
+        System.out.println("estoy en tu linea nebbercracker ");
         String correo;
         int meses;
         int opc;
