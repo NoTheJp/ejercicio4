@@ -23,7 +23,8 @@ public class PlataformaStreaming {
             gantotal += totalcuenta;
             System.out.println("Correo " + nuevo.getCorreo());
             System.out.println("Meses " + nuevo.getMeses());
-            System.out.println("Plan " + nuevo.getPlan());
+            System.out.println("Plan " + nuevo.getPlan()); //creo q aqui van a salir cosas raras, así q ahí rifate un get o algo xfa
+            System.out.println("Total usuario " + totalcuenta);
         }
         System.out.println("Total recaudado: " + gantotal);
     }
