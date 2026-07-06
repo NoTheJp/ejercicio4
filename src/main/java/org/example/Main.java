@@ -48,5 +48,6 @@ public class Main {
                 0.- Salir
                 """);
         System.out.println("holaa");
+        System.out.println("te amo");
     }
 }
