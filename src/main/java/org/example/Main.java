@@ -32,6 +32,7 @@ public class Main {
 
                 case 0:
                     System.out.println("Saliendo del sistema");
+                break;
 
                 default:
                     System.out.println("pepito tenía un clavito");
