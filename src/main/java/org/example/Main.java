@@ -14,7 +14,7 @@ public class Main {
 
         do {
 
-            System.out.println("\n===== PLATAFORMA STREAMING =====");
+            System.out.println("\n PLATAFORMA STREAMING ");
             System.out.println("1. Registrar usuario");
             System.out.println("2. Mostrar reporte");
             System.out.println("3. Salir");
