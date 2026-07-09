@@ -2,52 +2,96 @@ package org.example;
 
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static Scanner teclado = new Scanner (System.in);
-    static void main() {
-        System.out.println("estoy en tu linea nebbercracker ");
-        String correo;
-        int meses;
-        int opc;
-        PlataformaStreaming reporte = new PlataformaStreaming();
-        do{
-            texto();
-            opc = teclado.nextInt();
-            switch (opc){
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        PlataformaStreaming plataforma = new PlataformaStreaming();
+
+        int opcion;
+
+        do {
+
+            System.out.println("\n PLATAFORMA STREAMING ");
+            System.out.println("1. Registrar usuario");
+            System.out.println("2. Mostrar reporte");
+            System.out.println("3. Salir");
+            System.out.print("Opción: ");
+
+            opcion = sc.nextInt();
+            sc.nextLine();
+
+            switch (opcion) {
 
                 case 1:
-                    System.out.println("Registre su usuario");
-                    correo = teclado.next();
-                    /* e we aquí te toca pedir los meses y hacer el switch de los 3 planes
-                    Luego, crea la cuenta y regístrala
-                    sale?
-                    */
-                break;
+
+                    System.out.print("Correo electrónico: ");
+                    String correo = sc.nextLine();
+
+                    System.out.print("Meses contratados: ");
+                    int meses = sc.nextInt();
+
+                    System.out.println("\nSeleccione el plan");
+                    System.out.println("1. Básico");
+                    System.out.println("2. Estándar");
+                    System.out.println("3. Premium");
+                    System.out.print("Opción: ");
+
+                    int plan = sc.nextInt();
+
+                    PlanSuscripcion planSeleccionado;
+
+                    switch (plan) {
+
+                        case 1:
+                            planSeleccionado = new PlanBasico();
+                            break;
+
+                        case 2:
+                            planSeleccionado = new PlanEstandar();
+                            break;
+
+                        case 3:
+                            planSeleccionado = new PlanPremiun();
+                            break;
+
+                        default:
+                            System.out.println("Plan inválido.");
+                            continue;
+
+                    }
+
+                    CuentaUsuario usuario =
+                            new UsuarioStreaming(correo, meses, planSeleccionado);
+
+                    plataforma.registrarUsuario(usuario);
+
+                    System.out.println("\nUsuario registrado correctamente.");
+
+                    break;
 
                 case 2:
-                    reporte.reporte();
-                break;
 
-                case 0:
-                    System.out.println("Saliendo del sistema");
-                break;
+                    plataforma.imprimirReporte();
+
+                    break;
+
+                case 3:
+
+                    System.out.println("Programa finalizado.");
+
+                    break;
 
                 default:
-                    System.out.println("pepito tenía un clavito");
-                break;
+
+                    System.out.println("Opción inválida.");
+
             }
-        }while(opc != 0);
+
+        } while (opcion != 3);
+
     }
-    public static void texto(){
-        System.out.println("""
-                SELECCIONE UNA OPCION
-                1.- Registrar usuario
-                2.- Ver reporte
-                0.- Salir
-                """);
-        System.out.println("holaa");
-        System.out.println("te amo");
-    }
+
 }

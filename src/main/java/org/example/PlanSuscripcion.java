@@ -1,13 +1,8 @@
-public class PlanBasico implements PlanSuscripcion {
+package org.example;
 
-    @Override
-    public double calcularCosto(int meses) {
-        return meses * 5.0;
-    }
+public interface PlanSuscripcion {
+    double calcularCosto(int meses);
 
-    @Override
-    public String getNombrePlan() {
-        return "Plan Básico";
-    }
+    String getNombrePlan();
 
 }
