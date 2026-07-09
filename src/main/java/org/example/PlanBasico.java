@@ -6,7 +6,7 @@ public class PlanBasico implements PlanSuscripcion{
     public double calcularCosto(int meses) {
         return meses * 5.0;
     }
-    @override
+    @Override
     public String getNombrePlan(){
         return "plan Basico";
     }
